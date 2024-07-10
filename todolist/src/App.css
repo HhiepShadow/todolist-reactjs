@@ -1,0 +1,88 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(0, 153, 76);
+  margin-top: 10px;
+  color: white;
+  font-size: 30px;
+}
+
+.list-header {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(0, 0, 204);
+  margin-top: 10px;
+  color: white;
+  width: 100%;
+}
+
+ul {
+  width: 100%;
+}
+
+/* Item */
+.item {
+  display: flex;
+  border: 1px solid lightgrey;
+  padding: 10px 0;
+}
+
+.item .item-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+  flex-basis: 3;
+}
+
+.item .list-btns {
+  display: flex;
+  justify-content: end;
+  flex: 1;
+}
+
+.item button {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.search {
+  width: 80%;
+  display: flex;
+}
+
+.bottomBtns {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.add {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.add form {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.list-items {
+  width: 80%;
+}
