@@ -11,16 +11,16 @@ A simple Todo List application built with ReactJS and Vite.
 
 ## Screenshots
 
-![Todo List App](images/screenshot.png)
-![Todo List App](images/screenshot-1.png)
-![Todo List App](images/screenshot-2.png)
+![Todo List App](/todolist/images/screenshot.png)
+![Todo List App](/todolist/images/screenshot-1.png)
+![Todo List App](/todolist/images/screenshot-2.png)
 
 
 ## How to Use
 
 1. Clone the repository:
 ```
-git clone https://github.com/HHiepShadow/todolist-reactjs.git
+git clone <https://github.com/HHiepShadow/todolist-reactjs.git>
 ```
 
 2. Navigate to the project directory:
