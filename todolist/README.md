@@ -20,7 +20,7 @@ A simple Todo List application built with ReactJS and Vite.
 
 1. Clone the repository:
 ```
-git clone <https://github.com/HHiepShadow/todolist-reactjs.git>
+git clone https://github.com/HHiepShadow/todolist-reactjs.git
 ```
 
 2. Navigate to the project directory:
