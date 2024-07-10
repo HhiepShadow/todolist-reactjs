@@ -6,24 +6,14 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 import Layout from "./layout/Layout";
 import Home from "./components/Home";
 import Update from "./components/Update";
+import initialTasks from "./utils/initialTasks";
 
 function App() {
   const navigate = useNavigate();
 
-  const [tasks, setTasks] = useState<Task[]>([
-    {
-      id: 1,
-      content: "1",
-    },
-    {
-      id: 2,
-      content: "2",
-    },
-    {
-      id: 3,
-      content: "3",
-    },
-  ]);
+  const [tasks, setTasks] = useState<Task[]>(initialTasks);
+
+  console.log(tasks);
 
   const [search, setSearch] = useState<string>("");
   const [searchResults, setSearchResults] = useState<Task[]>([]);
@@ -74,6 +64,10 @@ function App() {
     );
     setSearchResults(searchList);
   }, [search, tasks]);
+
+  useEffect(() => {
+    localStorage.setItem("listTasks", JSON.stringify(tasks));
+  }, [tasks]);
 
   return (
     <Routes>
