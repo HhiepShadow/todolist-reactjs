@@ -1,26 +1,17 @@
-import { Dispatch, SetStateAction } from "react";
+import { useContext } from "react";
 import Search from "./Search";
 import ListItems from "./ListItems";
 import BottomBtns from "./BottomBtns";
-import { Task } from "../models/Task";
+import { Context } from "../context/Context";
 
-const Home = ({
-  items,
-  search,
-  setSearch,
-  handleDelete,
-  handleClear,
-}: {
-  items: Task[];
-  search: string;
-  setSearch: Dispatch<SetStateAction<string>>;
-  handleDelete: (id: number) => void;
-  handleClear: () => void;
-}) => {
+const Home = () => {
+  const { searchResults, handleDelete, handleClear } =
+    useContext(Context);
+
   return (
     <>
-      <Search search={search} setSearch={setSearch} />
-      <ListItems items={items} handleDelete={handleDelete} />
+      <Search/>
+      <ListItems items={searchResults} handleDelete={handleDelete} />
       <BottomBtns handleClear={handleClear} />
     </>
   );

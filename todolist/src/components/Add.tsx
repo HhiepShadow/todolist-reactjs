@@ -1,15 +1,9 @@
 import { Button, TextField } from "@mui/material";
-import { Dispatch, FormEventHandler, SetStateAction } from "react";
+import { useContext } from "react";
+import { Context } from "../context/Context";
 
-const Add = ({
-  handleSubmit,
-  newTask,
-  setNewTask,
-}: {
-  handleSubmit: FormEventHandler<HTMLFormElement>;
-  newTask: string;
-  setNewTask: Dispatch<SetStateAction<string>>;
-}) => {
+const Add = () => {
+  const { handleSubmit, newTaskContent,setNewTaskContent } = useContext(Context);
   return (
     <div className="add">
       <h2>Add new task:</h2>
@@ -19,8 +13,8 @@ const Add = ({
           id="newTask"
           type="text"
           required
-          value={newTask}
-          onChange={(e) => setNewTask(e.target.value)}
+          value={newTaskContent}
+          onChange={(e) => setNewTaskContent(e.target.value)}
         />
         <Button
           fullWidth

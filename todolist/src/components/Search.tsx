@@ -1,13 +1,9 @@
-import { Dispatch, SetStateAction } from "react";
+import { useContext } from "react";
 import { TextField } from "@mui/material";
+import { Context } from "../context/Context";
 
-const Search = ({
-  search,
-  setSearch,
-}: {
-  search: string;
-  setSearch: Dispatch<SetStateAction<string>>;
-}) => {
+const Search = () => {
+  const { search, setSearch } = useContext(Context);
   return (
     <div className="search">
       <TextField

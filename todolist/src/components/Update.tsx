@@ -1,20 +1,13 @@
 import { Button, TextField } from "@mui/material";
-import { Dispatch, SetStateAction } from "react";
+import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { Task } from "../models/Task";
+import { Context } from "../context/Context";
 
-const Update = ({
-  tasks,
-  handleUpdate,
-  updatedTask,
-  setUpdatedTask,
-}: {
-  tasks: Task[];
-  handleUpdate: (id: number) => void;
-  updatedTask: string;
-  setUpdatedTask: Dispatch<SetStateAction<string>>;
-}) => {
+const Update = () => {
   const { id } = useParams();
+  const { tasks, handleUpdate, updatedTask, setUpdatedTask } =
+    useContext(Context);
   const task: Task | undefined = tasks.find(
     (task) => task.id.toString() === id
   );
